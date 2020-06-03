@@ -16,8 +16,8 @@
     "type": "git",
     "url": "git+git@github.com:imjuni/my-easy-fp.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "ByungJoon Lee <imjuni+github@gmail.com>",
+  "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/imjuni/my-easy-fp#readme",
   "devDependencies": {
     "@types/debug": "4.1.5",
+    "create-ts-index": "^1.13.0",
     "jest": "25.2.7",
     "prettier": "2.0.2",
     "rimraf": "3.0.2",

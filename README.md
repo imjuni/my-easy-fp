@@ -10,7 +10,7 @@ jest already use a fail function. So if you use jest, ts-jest fail function is d
 ## Example
 
 ```ts
-import { Either, epass, efail, isPass } from 'simple-fp';
+import { Either, epass, efail, isPass } from 'my-easy-fp';
 
 function hello(greeting: string): Either<string, Error> {
   try {
@@ -37,17 +37,17 @@ if (isPass(greet)) {
 Why need this utility?
 
 ```ts
-import { isFals } from 'simple-fp'
+import { isFalse } from 'my-easy-fp'
 
 const iamboolean = false;
 
-// this line make runtime error very very easy 
+// this line easily miss in refactoring or changing
 if (!iamboolean) {
   console.log('I am execute false-case');
 }
 
-// more than better !
-if (isFalse(false)) {
+// more than better!
+if (isFalse(iamboolean)) {
   console.log('I am execute false-case');
 }
 ```
