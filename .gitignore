@@ -60,3 +60,9 @@ artifact/
 
 # sonarqube work dir
 .scannerwork
+
+# backup file
+**/index.ts.bak
+
+# npm configuration
+.npmrc

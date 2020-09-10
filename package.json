@@ -1,10 +1,11 @@
 {
   "name": "my-easy-fp",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Simple functional programming utility & Misc programming tool",
   "scripts": {
     "clean": "rimraf dist artifact",
     "prepub": "npm run build",
+    "ctix": "ctix create -p tsconfig.json",
     "pub": "npm publish --access=public",
     "build:tsc": "node_modules/.bin/tsc --noemit -p tsconfig.json",
     "prebuild": "npm run clean",
@@ -29,7 +30,7 @@
   "homepage": "https://github.com/imjuni/my-easy-fp#readme",
   "devDependencies": {
     "@types/debug": "4.1.5",
-    "create-ts-index": "^1.13.0",
+    "ctix": "^0.3.1",
     "jest": "25.2.7",
     "prettier": "2.0.2",
     "rimraf": "3.0.2",
