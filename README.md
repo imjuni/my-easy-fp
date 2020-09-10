@@ -1,39 +1,7 @@
 Simple functional programming utility & programming helper tools
 ----
 
-# Either
-Either utility class and function
-
-## Why epass & efail?
-jest already use a fail function. So if you use jest, ts-jest fail function is don't cause compile-time error.
-
-## Example
-
-```ts
-import { Either, epass, efail, isPass } from 'my-easy-fp';
-
-function hello(greeting: string): Either<string, Error> {
-  try {
-    if (greeting === 'hi') {
-      throw new Error('invalid greeting');
-    }
-
-    return epass('hello');
-  } catch (err) {
-    return efail(err);
-  }
-}
-
-const greet = hello('hi');
-
-if (isPass(greet)) {
-  console.log(greet.pass, 'world');
-} else {
-  console.log(greet.fail, 'want hello');
-}
-```
-
-# Empty check
+# False & True checker
 Why need this utility?
 
 ```ts
@@ -50,4 +18,34 @@ if (!iamboolean) {
 if (isFalse(iamboolean)) {
   console.log('I am execute false-case');
 }
+```
+
+# Empty checker
+Why need this utility?
+
+```ts
+const iamempty: null | undefined = undefined;
+
+// this line some boring task
+if (iamempty === undefined || iamempty === null) {
+  console.log('i am empty');
+}
+
+// more than better!
+if (isEmpty(iamempty)) {
+  console.log('i am empty');
+}
+```
+
+# Sleep
+Why need this utility?
+
+```ts
+const ms = 1000;
+
+// this line some boring task
+await new Promise((resolve) => setTimeout(() => resolve(), ms));
+
+// more than better!
+await sleep(ms);
 ```
