@@ -1,6 +1,6 @@
 {
   "name": "my-easy-fp",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Simple functional programming utility & Misc programming tool",
   "scripts": {
     "lint": "eslint --quiet --ext ts,tsx ./src/*",
