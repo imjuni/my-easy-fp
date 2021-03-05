@@ -1,13 +1,15 @@
 {
   "name": "my-easy-fp",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Simple functional programming utility & Misc programming tool",
   "scripts": {
+    "script": "TS_NODE_FILES=true NODE_ENV=production TS_NODE_PROJECT=tsconfig.json ts-node -r tsconfig-paths/register",
     "lint": "eslint --quiet --ext ts,tsx ./src/*",
     "clean": "rimraf dist artifact",
-    "prepub": "npm run build",
     "ctix": "ctix create -p tsconfig.json",
+    "prepub": "npm run ctix && npm run build",
     "pub": "npm publish --access=public",
+    "postpub": "ctix clean -p tsconfig.json",
     "build:tsc": "node_modules/.bin/tsc --noemit -p tsconfig.json",
     "prebuild": "npm run clean",
     "build": "NODE_ENV=develop npx webpack --config webpack.config.prod.js",
