@@ -1,6 +1,6 @@
 {
   "name": "my-easy-fp",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Simple functional programming utility & Misc programming tool",
   "scripts": {
     "script": "TS_NODE_FILES=true NODE_ENV=production TS_NODE_PROJECT=tsconfig.json ts-node -r tsconfig-paths/register",
@@ -11,7 +11,7 @@
     "pub": "npm publish --access=public",
     "postpub": "ctix clean -p tsconfig.json",
     "build:tsc": "node_modules/.bin/tsc --noemit -p tsconfig.json",
-    "prebuild": "npm run clean",
+    "prebuild": "npm run clean && npm run ctix",
     "build": "NODE_ENV=develop npx webpack --config webpack.config.prod.js",
     "prebuild:dev": "npm run clean",
     "build:dev": "NODE_ENV=develop npx webpack --config webpack.config.dev.js"
