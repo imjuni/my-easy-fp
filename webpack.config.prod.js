@@ -6,10 +6,9 @@ const webpackNodeExternals = require('webpack-node-externals');
 const distPath = path.resolve(path.join(__dirname, 'dist'));
 
 const config = {
-  devtool: 'eval-source-map',
   externals: [
     webpackNodeExternals({
-      whitelist: ['tslib'],
+      allowlist: ['tslib'],
     }),
   ],
   mode: 'production',
@@ -17,6 +16,13 @@ const config = {
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+    fallback: {
+      __dirname: false,
+      __filename: false,
+      console: false,
+      global: false,
+      process: false,
+    },
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     plugins: [
       new tsconfigPathsWebpackPlugin({
@@ -52,19 +58,9 @@ const config = {
         test: /\.tsx?$/,
         options: {
           configFile: 'tsconfig.prod.json',
-        }
+        },
       },
     ],
-  },
-
-  devtool: 'inline-source-map',
-
-  node: {
-    __dirname: false,
-    __filename: false,
-    console: false,
-    global: false,
-    process: false,
   },
 };
 

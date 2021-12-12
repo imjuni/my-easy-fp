@@ -42,7 +42,7 @@ export function isComplexEmpty<T>(value?: T | undefined | null): value is null |
     return true;
   }
 
-  if (typeof value === 'number' && isNaN(value)) {
+  if (typeof value === 'number' && Number.isNaN(value)) {
     return true;
   }
 
