@@ -1,19 +1,20 @@
 {
   "name": "my-easy-fp",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Simple functional programming utility & Misc programming tool",
   "scripts": {
     "script": "cross-env NODE_ENV=production TS_NODE_PROJECT=tsconfig.json ts-node -r tsconfig-paths/register",
     "lint": "eslint --quiet --ext ts,tsx ./src/*",
     "clean": "rimraf dist artifact",
     "ctix": "ctix create -p tsconfig.json",
-    "ctix:clean": "ctix clean -p tsconfig.json",
+    "ctix:clean": "ctix clean -p tsconfig.json -b",
     "prepub:prod": "npm run ctix && npm run build",
     "pub:prod": "npm publish --access=public",
     "postpub:prod": "ctix clean -p tsconfig.json",
     "build:tsc": "node_modules/.bin/tsc --noemit -p tsconfig.json",
     "prebuild": "npm run clean && npm run ctix",
     "build": "cross-env NODE_ENV=develop npx webpack --config webpack.config.prod.js",
+    "postbuild": "npm run clean && npm run ctix:clean",
     "prebuild:dev": "npm run clean",
     "build:dev": "cross-env NODE_ENV=develop npx webpack --config webpack.config.dev.js"
   },

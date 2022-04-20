@@ -46,12 +46,14 @@ Simple utility functions that can use browser, node.
 | - | - |
 | sleep | sleep given millisecond |
 
-## type helper
+## Custom Utility Types
 | name | description |
 | - | - |
 | TResolvePromise | get type resolved promise |
 | TResolveArray | get type resolve array |
 | TNullablePick | convert specific field to nullable |
+| TNonNullableObject | object type each field to non nullable |
+| TNonNullablePick | convert specific field to non nullable |
 
 # False & True checker
 Why need this utility?
