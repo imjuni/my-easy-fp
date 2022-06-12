@@ -26,3 +26,21 @@ export function getRandomRangeInt(min: number, max: number) {
   const flooredMax = Math.floor(max);
   return Math.floor(Math.random() * (flooredMax - ceiledMin)) + min;
 }
+
+export function isError(err?: unknown): Error | undefined {
+  if (err instanceof Error) {
+    return err;
+  }
+
+  if (
+    err !== undefined &&
+    err !== null &&
+    typeof err === 'object' &&
+    'message' in err &&
+    'stack' in err
+  ) {
+    return err as Error;
+  }
+
+  return undefined;
+}

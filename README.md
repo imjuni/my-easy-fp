@@ -40,6 +40,7 @@ Simple utility functions that can use browser, node.
 | typedkey | same work Object.keys, but typed key in Recoed |
 | getRandomRange | return random value in min and max |
 | getRandomRangeInt | return random integer value in min and max |
+| isError | if argument is Error return Error or return undefined |
 
 ## sleep
 | name | description |
