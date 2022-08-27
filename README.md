@@ -1,66 +1,73 @@
-Simple functional programming utility & programming helper tools
-----
+# Simple functional programming utility & programming helper tools
+
 [![Download Status](https://img.shields.io/npm/dw/my-easy-fp.svg)](https://npmcharts.com/compare/my-easy-fp?minimal=true) [![Github Star](https://img.shields.io/github/stars/imjuni/my-easy-fp.svg?style=popout)](https://github.com/imjuni/my-easy-fp) [![Github Issues](https://img.shields.io/github/issues-raw/imjuni/my-easy-fp.svg)](https://github.com/imjuni/my-easy-fp/issues) [![NPM version](https://img.shields.io/npm/v/my-easy-fp.svg)](https://www.npmjs.com/package/my-easy-fp) [![License](https://img.shields.io/npm/l/my-easy-fp.svg)](https://github.com/imjuni/my-easy-fp/blob/master/LICENSE)
 
-Simple utility functions that can use browser, node. 
+Simple utility functions that can use browser, node.
 
-# Function list
+## Function list
 
-## boolean 
-| name | description |
-| - | - |
+### boolean
+
+| name    | description                    |
+| ------- | ------------------------------ |
 | isFalse | If argument false, return true |
-| isTrue | If argument true, return true |
-| invert | return inverted boolean value |
+| isTrue  | If argument true, return true  |
+| invert  | return inverted boolean value  |
 
-## array
-| name | description |
-| - | - |
+### array
+
+| name     | description                                                                       |
+| -------- | --------------------------------------------------------------------------------- |
 | populate | populate array zero base, if you pass second argument true that populate one base |
-| chunk | array split given size |
-| last | pick last element from array  |
-| first | pick first element from array  |
-| toArray | make array given argument |
+| chunk    | array split given size                                                            |
+| last     | pick last element from array                                                      |
+| first    | pick first element from array                                                     |
+| toArray  | make array given argument                                                         |
 
-## empty
-| name | description |
-| - | - |
-| isUndefined | if argument undefiend, return true |
-| isNotUndefined | if argument not undefined, return true |
-| isNull | if argument null, return true |
-| isNotNull | if argument not null, return true |
-| isNotEmpty | if argument not null and undefined, return true |
-| isEmpty | if argument null or undefined, return true |
-| isComplexEmpty | if argument not undefined and null, do additional test isNaN, empty string, empty array, empty object  |
-| isNotComplexEmpty | return inverted value isComplexEmpty |
+### empty
 
-## misc
-| name | description |
-| - | - |
-| typedkey | same work Object.keys, but typed key in Recoed |
-| getRandomRange | return random value in min and max |
-| getRandomRangeInt | return random integer value in min and max |
-| isError | if argument is Error return Error or return undefined |
+| name              | description                                                                                           |
+| ----------------- | ----------------------------------------------------------------------------------------------------- |
+| isUndefined       | if argument undefiend, return true                                                                    |
+| isNotUndefined    | if argument not undefined, return true                                                                |
+| isNull            | if argument null, return true                                                                         |
+| isNotNull         | if argument not null, return true                                                                     |
+| isNotEmpty        | if argument not null and undefined, return true                                                       |
+| isEmpty           | if argument null or undefined, return true                                                            |
+| isComplexEmpty    | if argument not undefined and null, do additional test isNaN, empty string, empty array, empty object |
+| isNotComplexEmpty | return inverted value isComplexEmpty                                                                  |
 
-## sleep
-| name | description |
-| - | - |
+### misc
+
+| name              | description                                           |
+| ----------------- | ----------------------------------------------------- |
+| typedkey          | same work Object.keys, but typed key in Recoed        |
+| getRandomRange    | return random value in min and max                    |
+| getRandomRangeInt | return random integer value in min and max            |
+| isError           | if argument is Error return Error or return undefined |
+
+### sleep
+
+| name  | description             |
+| ----- | ----------------------- |
 | sleep | sleep given millisecond |
 
-## Custom Utility Types
-| name | description |
-| - | - |
-| TResolvePromise | get type resolved promise |
-| TResolveArray | get type resolve array |
-| TNullablePick | convert specific field to nullable |
-| TNonNullableObject | object type each field to non nullable |
-| TNonNullablePick | convert specific field to non nullable |
+### Custom Utility Types
 
-# False & True checker
+| name               | description                            |
+| ------------------ | -------------------------------------- |
+| TResolvePromise    | get type resolved promise              |
+| TResolveArray      | get type resolve array                 |
+| TNullablePick      | convert specific field to nullable     |
+| TNonNullableObject | object type each field to non nullable |
+| TNonNullablePick   | convert specific field to non nullable |
+
+## False & True checker
+
 Why need this utility?
 
 ```ts
-import { isFalse } from 'my-easy-fp'
+import { isFalse } from 'my-easy-fp';
 
 const iamboolean = false;
 
@@ -75,7 +82,8 @@ if (isFalse(iamboolean)) {
 }
 ```
 
-# Empty checker
+## Empty checker
+
 Why need this utility?
 
 ```ts
@@ -92,7 +100,8 @@ if (isEmpty(iamempty)) {
 }
 ```
 
-# Sleep
+## Sleep
+
 Why need this utility?
 
 ```ts
@@ -105,7 +114,8 @@ await new Promise((resolve) => setTimeout(() => resolve(), ms));
 await sleep(ms);
 ```
 
-# Array
+## Array
+
 populate, chunk utility here.
 
 ```ts
@@ -116,18 +126,19 @@ const seq = populate(10);
 const seq = populate(10, true);
 
 // chunked is [[1,2],[3,4],[5,6],[7]]
-const chunked = chunk([1,2,3,4,5,6,7], 2);
+const chunked = chunk([1, 2, 3, 4, 5, 6, 7], 2);
 ```
 
-# Type Helper
-resolve promise, array. and some interface or class field change nullable.
+## Type Helper
+
+resolve promise, array. But you can use [type-fest](https://github.com/sindresorhus/type-fest) or [ts-essentials](https://github.com/ts-essentials/ts-essentials). Recommand use type-fest and tsessentials.
 
 ```ts
 // you can get string | Buffer type
-type TResolvedPromiseType = TResolvePromise<ReturnType<typeof fs.promises.readFile>>
+type TResolvedPromiseType = TResolvePromise<ReturnType<typeof fs.promises.readFile>>;
 
 // you can get number type
-type TResolvedArrayType = TResolveArray<number[]>
+type TResolvedArrayType = TResolveArray<number[]>;
 
 interface IStudent {
   name: string;
