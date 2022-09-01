@@ -23,6 +23,7 @@ Simple utility functions that can use browser, node.
 | last     | pick last element from array                                                      |
 | first    | pick first element from array                                                     |
 | toArray  | make array given argument                                                         |
+| settify  | make it set and convert it back to array                                          |
 
 ### empty
 
@@ -127,6 +128,9 @@ const seq = populate(10, true);
 
 // chunked is [[1,2],[3,4],[5,6],[7]]
 const chunked = chunk([1, 2, 3, 4, 5, 6, 7], 2);
+
+// settify is [ 1, 2, 3, 4 ]
+const settified = settify([1, 1, 2, 3, 2, 3, 4]);
 ```
 
 ## Type Helper
