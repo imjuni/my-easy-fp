@@ -88,15 +88,27 @@ if (isFalse(iamboolean)) {
 Why need this utility?
 
 ```ts
-const iamempty: null | undefined = undefined;
+const iamempty?: string | null = undefined;
 
 // this line some boring task
-if (iamempty === undefined || iamempty === null) {
+if (iamempty === undefined || iamempty === null || iamempty !== '') {
   console.log('i am empty');
 }
 
 // more than better!
-if (isEmpty(iamempty)) {
+if (isComplexEmpty(iamempty)) {
+  console.log('i am empty');
+}
+```
+
+You need only `undefined` and `null` check, use double equal operator.
+
+```ts
+const iamempty?: string | null = undefined;
+
+// Recently ESLint allow double equal for null check
+// see https://eslint.org/docs/latest/rules/eqeqeq#allow-null
+if (iamempty == null) {
   console.log('i am empty');
 }
 ```
@@ -131,6 +143,9 @@ const chunked = chunk([1, 2, 3, 4, 5, 6, 7], 2);
 
 // settify is [ 1, 2, 3, 4 ]
 const settified = settify([1, 1, 2, 3, 2, 3, 4]);
+
+// zeroIndex is 1
+const zeroIndex = atOrThrow([1, 2, 3], 0);
 ```
 
 ## Type Helper

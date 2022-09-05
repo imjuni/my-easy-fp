@@ -1,3 +1,4 @@
+export { default as atOrThrow } from './atOrThrow/atOrThrow';
 export { default as chunk } from './chunk/chunk';
 export { default as first } from './first/first';
 export { default as getRandomRange } from './getRandomRange/getRandomRange';

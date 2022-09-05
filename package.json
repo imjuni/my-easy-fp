@@ -1,6 +1,6 @@
 {
   "name": "my-easy-fp",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "Simple functional programming utility & Misc programming tool",
   "scripts": {
     "script": "cross-env NODE_ENV=production TS_NODE_PROJECT=tsconfig.json ts-node -r tsconfig-paths/register",
@@ -41,7 +41,7 @@
     "@typescript-eslint/eslint-plugin-tslint": "^5.35.1",
     "@typescript-eslint/parser": "^5.35.1",
     "cross-env": "^7.0.3",
-    "ctix": "^1.3.4",
+    "ctix": "^1.4.0",
     "eslint": "^8.23.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
