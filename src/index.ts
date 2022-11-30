@@ -19,6 +19,7 @@ export { default as last } from './last/last';
 export { default as populate } from './populate/populate';
 export { default as settify } from './settify/settify';
 export { default as sleep } from './sleep/sleep';
+export type { default as TPartialRecord } from './TPartialRecord/TPartialRecord';
 export type { default as TNonNullableObject } from './TNonNullableObject/TNonNullableObject';
 export type { default as TNonNullablePick } from './TNonNullablePick/TNonNullablePick';
 export type { default as TNullablePick } from './TNullablePick/TNullablePick';

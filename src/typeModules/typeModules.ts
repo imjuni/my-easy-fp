@@ -4,14 +4,14 @@
  */
 
 /**
- * @deprecated will be deprecate next version: 0.15.0
+ * @deprecated will be deprecate next version
  */
 export type IsEqual<T, U> = (<G>() => G extends T ? 1 : 2) extends <G>() => G extends U ? 1 : 2
   ? true
   : false;
 
 /**
- * @deprecated will be deprecate next version: 0.15.0
+ * @deprecated will be deprecate next version
  */
 export interface SimplifyOptions {
   /**
@@ -23,14 +23,14 @@ export interface SimplifyOptions {
 }
 
 /**
- * @deprecated will be deprecate next version: 0.15.0
+ * @deprecated will be deprecate next version
  */
 export type Flatten<AnyType, Options extends SimplifyOptions = {}> = Options['deep'] extends true
   ? { [KeyType in keyof AnyType]: Simplify<AnyType[KeyType], Options> }
   : { [KeyType in keyof AnyType]: AnyType[KeyType] };
 
 /**
- * @deprecated will be deprecate next version: 0.15.0
+ * @deprecated will be deprecate next version
  */
 export type Filter<KeyType, ExcludeType> = IsEqual<KeyType, ExcludeType> extends true
   ? never
@@ -39,7 +39,7 @@ export type Filter<KeyType, ExcludeType> = IsEqual<KeyType, ExcludeType> extends
   : KeyType;
 
 /**
- * @deprecated will be deprecate next version: 0.15.0
+ * @deprecated will be deprecate next version
  */
 export type Simplify<
   AnyType,
@@ -47,14 +47,14 @@ export type Simplify<
 > = Flatten<AnyType> extends AnyType ? Flatten<AnyType, Options> : AnyType;
 
 /**
- * @deprecated will be deprecate next version: 0.15.0
+ * @deprecated will be deprecate next version
  */
 export type Except<ObjectType, KeysType extends keyof ObjectType> = {
   [KeyType in keyof ObjectType as Filter<KeyType, KeysType>]: ObjectType[KeyType];
 };
 
 /**
- * @deprecated will be deprecate next version: 0.15.0
+ * @deprecated will be deprecate next version
  */
 export type SetOptional<BaseType, Keys extends keyof BaseType> = Simplify<
   // Pick just the keys that are readonly from the base type.
@@ -64,7 +64,7 @@ export type SetOptional<BaseType, Keys extends keyof BaseType> = Simplify<
 >;
 
 /**
- * @deprecated will be deprecate next version: 0.15.0
+ * @deprecated will be deprecate next version
  */
 export type SetRequired<BaseType, Keys extends keyof BaseType> = Simplify<
   // Pick just the keys that are optional from the base type.
