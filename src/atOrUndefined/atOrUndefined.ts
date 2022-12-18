@@ -1,5 +1,5 @@
 /**
- * Same behavior of Array.prototype.at but at function result will be undefined throw exception.
+ * Same behavior of Array.prototype.at but at function result will be undefined return undefined.
  *
  * @param values array arguments
  * @param index array index arguments
