@@ -70,7 +70,7 @@
   "exclude": [
     "dist/**",
     "**/.configs/**",
-    "webpack.config.dev.ts",
-    "webpack.config.prod.ts"
+    "jest.config.cjs",
+    "jest.setup.cjs"
   ]
 }
