@@ -1,7 +1,6 @@
-export default function isError(
-  err?: unknown,
-  defaultValue?: Error,
-): typeof defaultValue extends Error ? Error : Error | undefined {
+function isError(err: unknown): Error | undefined;
+function isError(err: unknown, defaultValue: Error): Error;
+function isError(err?: unknown, defaultValue?: Error): Error | undefined {
   if (err instanceof Error) {
     return err;
   }
@@ -22,3 +21,5 @@ export default function isError(
 
   return undefined;
 }
+
+export default isError;
