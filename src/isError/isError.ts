@@ -1,4 +1,5 @@
-export default function isError(err?: unknown): Error | undefined {
+function isError(err: unknown, defaultValue: Error): Error;
+function isError(err?: unknown, defaultValue?: Error): Error | undefined {
   if (err instanceof Error) {
     return err;
   }
@@ -13,5 +14,11 @@ export default function isError(err?: unknown): Error | undefined {
     return err as Error;
   }
 
+  if (defaultValue !== undefined && defaultValue !== null) {
+    return defaultValue;
+  }
+
   return undefined;
 }
+
+export default isError;
