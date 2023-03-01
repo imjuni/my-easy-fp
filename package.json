@@ -1,6 +1,6 @@
 {
   "name": "my-easy-fp",
-  "version": "0.20.0",
+  "version": "0.20.1",
   "description": "Simple functional programming utility & Misc programming tool",
   "engines": {
     "node": ">=14"
@@ -24,9 +24,16 @@
   },
   "author": "ByungJoon Lee <imjuni+github@gmail.com>",
   "license": "MIT",
-  "main": "dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "typings": "dist/esm/index.d.ts",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "typings": "dist/esm/index.d.mts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.cjs",
+      "import": "./dist/esm/index.mjs",
+      "typings": "./dist/esm/index.d.mts"
+    }
+  },
   "files": [
     "dist"
   ],

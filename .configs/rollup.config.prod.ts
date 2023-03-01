@@ -49,11 +49,11 @@ export default [
     input: 'dist/cjs/src/index.d.ts',
     output: [
       {
-        file: 'dist/cjs/index.d.ts',
+        file: 'dist/cjs/index.d.cts',
         format: 'cjs',
       },
       {
-        file: 'dist/esm/index.d.ts',
+        file: 'dist/esm/index.d.mts',
         format: 'esm',
       },
     ],
