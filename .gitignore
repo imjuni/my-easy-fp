@@ -54,6 +54,7 @@ artifact/
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+.eslintcache
 
 # Personal scripts
 # scripts/

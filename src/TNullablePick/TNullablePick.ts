@@ -1,4 +1,4 @@
-import { SetOptional } from '../typeModules/typeModules';
+import type { SetOptional } from '../typeModules/typeModules';
 
 /**
  * Recommand use `SetOptional` in [type-fest](https://github.com/sindresorhus/type-fest).

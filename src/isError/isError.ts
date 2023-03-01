@@ -15,7 +15,7 @@ function isError(err?: unknown, defaultValue?: Error): Error | undefined {
     return err as Error;
   }
 
-  if (defaultValue !== undefined && defaultValue !== null) {
+  if (defaultValue != null) {
     return defaultValue;
   }
 

@@ -1,4 +1,4 @@
-import { SetRequired } from '../typeModules/typeModules';
+import type { SetRequired } from '../typeModules/typeModules';
 
 /**
  * Recommand use `SetRequired` in [type-fest](https://github.com/sindresorhus/type-fest).

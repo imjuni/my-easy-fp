@@ -8,7 +8,7 @@
 
 export default function atOrThrow<T>(values: T | T[], index: number): NonNullable<T> {
   if (!Array.isArray(values) && values == null) {
-    throw new Error(`Invalid Index: ${index}/ ${values}`);
+    throw new Error(`Invalid Index: ${index}`);
   }
 
   if (!Array.isArray(values)) {
