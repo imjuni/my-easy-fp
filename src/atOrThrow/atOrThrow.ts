@@ -6,9 +6,9 @@
  * @returns element of array at the index order
  */
 
-export default function atOrThrow<T>(values: T | T[], index: number): NonNullable<T> {
+export default function atOrThrow<T>(values: T | T[], index: number, err?: Error): NonNullable<T> {
   if (!Array.isArray(values) && values == null) {
-    throw new Error(`Invalid Index: ${index}`);
+    throw err != null ? err : new Error(`Invalid Index: ${index}`);
   }
 
   if (!Array.isArray(values)) {
@@ -16,13 +16,13 @@ export default function atOrThrow<T>(values: T | T[], index: number): NonNullabl
   }
 
   if (values.length <= index) {
-    throw new Error(`Invalid Index: ${index}/ ${values.length}`);
+    throw err != null ? err : new Error(`Invalid Index: ${index}/ ${values.length}`);
   }
 
   const element = values[index];
 
   if (element == null) {
-    throw new Error(`Invalid Index: ${index}/ ${values.length}`);
+    throw err != null ? err : new Error(`Invalid Index: ${index}/ ${values.length}`);
   }
 
   return element;
