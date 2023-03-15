@@ -62,6 +62,9 @@ artifact/
 # sonarqube work dir
 .scannerwork
 
+# vscode
+.vscode/
+
 # backup file
 **/index.ts.bak
 

@@ -15,6 +15,11 @@ export default function atOrThrow<T>(values: T | T[], index: number, err?: Error
     return values;
   }
 
+  if (index < 0 && values.length + index >= 0) {
+    const element = values[values.length + index]!;
+    return element;
+  }
+
   if (values.length <= index) {
     throw err != null ? err : new Error(`Invalid Index: ${index}/ ${values.length}`);
   }

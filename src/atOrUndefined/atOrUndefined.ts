@@ -15,6 +15,11 @@ export default function atOrUndefined<T>(values: T | T[], index: number): T | un
     return values;
   }
 
+  if (index < 0 && values.length + index >= 0) {
+    const element = values[values.length + index];
+    return element;
+  }
+
   if (values.length <= index) {
     return undefined;
   }

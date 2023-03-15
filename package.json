@@ -1,12 +1,13 @@
 {
   "name": "my-easy-fp",
-  "version": "0.20.2",
+  "version": "0.20.3",
   "description": "Simple functional programming utility & Misc programming tool",
   "engines": {
     "node": ">=14"
   },
   "scripts": {
     "script": "cross-env NODE_ENV=production TS_NODE_PROJECT=tsconfig.json ts-node -r tsconfig-paths/register",
+    "test": "node --trace-warnings --no-compilation-cache node_modules/.bin/jest --coverage",
     "lint": "just --config ./.configs/just.config.ts lint",
     "clean": "just --config ./.configs/just.config.ts clean",
     "dd": "npx deps-diff md -d prod -d dev --title-list-type '*' --deps-list-type '*' --content-list-type '*'",
