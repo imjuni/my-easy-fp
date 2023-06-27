@@ -1,9 +1,9 @@
 {
   "name": "my-easy-fp",
-  "version": "0.20.3",
+  "version": "0.21.0",
   "description": "Simple functional programming utility & Misc programming tool",
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "scripts": {
     "script": "cross-env NODE_ENV=production TS_NODE_PROJECT=tsconfig.json ts-node -r tsconfig-paths/register",
