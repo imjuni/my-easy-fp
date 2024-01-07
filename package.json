@@ -1,6 +1,6 @@
 {
   "name": "my-easy-fp",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "description": "Simple functional programming utility & Misc programming tool",
   "engines": {
     "node": ">=16"
