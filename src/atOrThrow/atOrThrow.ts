@@ -6,7 +6,11 @@
  * @returns element of array at the index order
  */
 
-export default function atOrThrow<T>(values: T | T[], index: number, err?: Error): NonNullable<T> {
+export default function atOrThrow<T, E extends Error>(
+  values: T | T[],
+  index: number,
+  err?: E,
+): NonNullable<T> {
   if (!Array.isArray(values) && values == null) {
     throw err != null ? err : new Error(`Invalid Index: ${index}`);
   }

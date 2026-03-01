@@ -35,10 +35,9 @@ task('clean:dts', async () => {
   });
 });
 
-task('ctix:single', async () => {
+task('ctix', async () => {
   const cmd = 'ctix';
-  const option =
-    'single -p ./tsconfig.prod.json --config ./.configs/.ctirc -g ./.configs/.ctiignore';
+  const option = 'build --config .configs/.ctirc';
 
   logger.info('Create index file : ', cmd, option);
 
@@ -50,7 +49,7 @@ task('ctix:single', async () => {
 
 task('ctix:remove', async () => {
   const cmd = 'ctix';
-  const option = 'remove -p ./tsconfig.json --config ./.configs/.ctirc -g ./.configs/.ctiignore';
+  const option = 'remove --force-yes --remove-backup';
 
   logger.info('Remove index file : ', cmd, option);
 
@@ -60,30 +59,18 @@ task('ctix:remove', async () => {
   });
 });
 
-task('+rollup:dev', async () => {
-  const cmd = 'rollup';
-  const option = '--config ./.configs/rollup.config.dev.ts --configPlugin typescript';
+task('+esbuild:dev', async () => {
+  const { buildAll } = await import('./esbuild.config.ts');
 
-  await execa(cmd, splitArgs(option), {
-    env: {
-      NODE_ENV: 'production',
-    },
-    stderr: process.stderr,
-    stdout: process.stdout,
-  });
+  logger.info('Building with esbuild (dev)...');
+  await buildAll();
 });
 
-task('+rollup:prod', async () => {
-  const cmd = 'rollup';
-  const option = '--config ./.configs/rollup.config.prod.ts --configPlugin typescript';
+task('+esbuild:prod', async () => {
+  const { buildAll } = await import('./esbuild.config.ts');
 
-  await execa(cmd, splitArgs(option), {
-    env: {
-      NODE_ENV: 'production',
-    },
-    stderr: process.stderr,
-    stdout: process.stdout,
-  });
+  logger.info('Building with esbuild (prod)...');
+  await buildAll();
 });
 
 task('lint', async () => {
@@ -155,9 +142,9 @@ task('+unpub', async () => {
   });
 });
 
-task('rollup:prod', series('clean', 'ctix:single', '+rollup:prod', 'ctix:remove', 'clean:dts'));
-task('rollup:dev', series('clean', 'ctix:single', '+rollup:dev', 'ctix:remove', 'clean:dts'));
+task('esbuild:prod', series('clean', 'ctix', '+esbuild:prod', 'ctix:remove', 'clean:dts'));
+task('esbuild:dev', series('clean', 'ctix', '+esbuild:dev', 'ctix:remove', 'clean:dts'));
 task('build', series('clean', '+build'));
-task('pub', series('rollup:prod', '+pub'));
+task('pub', series('esbuild:prod', '+pub'));
 task('unpub', series('clean', '+unpub'));
-task('pub:prod', series('rollup:prod', '+pub:prod'));
+task('pub:prod', series('esbuild:prod', '+pub:prod'));

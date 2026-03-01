@@ -5,11 +5,11 @@
  * @param predicate predicate function
  * @returns find result
  */
-export default function findOrThrow<T>(
+export default function findOrThrow<T, E extends Error>(
   values: T[],
   predicate: (value: T, index: number, obj: T[]) => unknown,
-  err?: Error,
-): T {
+  err?: E,
+): NonNullable<T> {
   const result = values.find(predicate);
 
   if (result == null) {

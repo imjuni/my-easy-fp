@@ -70,3 +70,6 @@ artifact/
 
 # npm configuration
 .npmrc
+
+# claude configuration
+.claude
