@@ -1,0 +1,13 @@
+green='\033[0;32m'
+yellow='\033[0;33m'
+no_color='\033[0m'
+
+echo -e "\n ${yellow}* code lint-staged.${no_color}"
+npm run lint-staged
+echo -e "\n ${yellow}* code lint-staged done.${no_color}"
+
+echo -e "\n ${yellow}* code build start.${no_color}"
+npm run bundle
+echo -e "\n ${yellow}* code build end.${no_color}"
+
+echo -e "\n ${green}* pre-commit hook was SUCCESSFUL${no_color} \n"

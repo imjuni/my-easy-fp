@@ -18,6 +18,6 @@ await esbuild.build({
   format,
   outfile: `dist/${format}/index.${ext}`,
   sourcemap: true,
-  minify: false,
+  minify: true,
   tsconfig: 'tsconfig.prod.json',
 });
