@@ -6,9 +6,8 @@
 /**
  * @deprecated will be deprecate next version
  */
-export type IsEqual<T, U> = (<G>() => G extends T ? 1 : 2) extends <G>() => G extends U ? 1 : 2
-  ? true
-  : false;
+export type IsEqual<T, U> =
+  (<G>() => G extends T ? 1 : 2) extends <G>() => G extends U ? 1 : 2 ? true : false;
 
 /**
  * @deprecated will be deprecate next version
@@ -25,6 +24,7 @@ export interface SimplifyOptions {
 /**
  * @deprecated will be deprecate next version
  */
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export type Flatten<AnyType, Options extends SimplifyOptions = {}> = Options['deep'] extends true
   ? { [KeyType in keyof AnyType]: Simplify<AnyType[KeyType], Options> }
   : { [KeyType in keyof AnyType]: AnyType[KeyType] };
@@ -32,19 +32,19 @@ export type Flatten<AnyType, Options extends SimplifyOptions = {}> = Options['de
 /**
  * @deprecated will be deprecate next version
  */
-export type Filter<KeyType, ExcludeType> = IsEqual<KeyType, ExcludeType> extends true
-  ? never
-  : KeyType extends ExcludeType
-  ? never
-  : KeyType;
+export type Filter<KeyType, ExcludeType> =
+  IsEqual<KeyType, ExcludeType> extends true
+    ? never
+    : KeyType extends ExcludeType
+      ? never
+      : KeyType;
 
 /**
  * @deprecated will be deprecate next version
  */
-export type Simplify<
-  AnyType,
-  Options extends SimplifyOptions = {},
-> = Flatten<AnyType> extends AnyType ? Flatten<AnyType, Options> : AnyType;
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+export type Simplify<AnyType, Options extends SimplifyOptions = {}> =
+  Flatten<AnyType> extends AnyType ? Flatten<AnyType, Options> : AnyType;
 
 /**
  * @deprecated will be deprecate next version

@@ -5,7 +5,7 @@
  * lower than max if max isn't an integer).
  * Using Math.round() will give you a non-uniform distribution!
  */
-export default function getRandomRangeInt(min: number, max: number) {
+export default function getRandomRangeInt(min: number, max: number): number {
   const ceiledMin = Math.ceil(min);
   const flooredMax = Math.floor(max);
   return Math.floor(Math.random() * (flooredMax - ceiledMin)) + min;

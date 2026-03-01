@@ -6,6 +6,6 @@ import isComplexEmpty from '../isComplexEmpty/isComplexEmpty';
  *
  * @param value value you want to check it's non-empty
  */
-export default function isNotComplexEmpty<T>(value?: T | null | undefined): value is T {
+export default function isNotComplexEmpty<T>(value?: T | null): value is T {
   return !isComplexEmpty<T>(value);
 }

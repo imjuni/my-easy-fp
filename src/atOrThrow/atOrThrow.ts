@@ -12,7 +12,7 @@ export default function atOrThrow<T, E extends Error>(
   err?: E,
 ): NonNullable<T> {
   if (!Array.isArray(values) && values == null) {
-    throw err != null ? err : new Error(`Invalid Index: ${index}`);
+    throw err ?? new Error(`Invalid Index: ${index}`);
   }
 
   if (!Array.isArray(values)) {
@@ -20,18 +20,19 @@ export default function atOrThrow<T, E extends Error>(
   }
 
   if (index < 0 && values.length + index >= 0) {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const element = values[values.length + index]!;
     return element;
   }
 
   if (values.length <= index) {
-    throw err != null ? err : new Error(`Invalid Index: ${index}/ ${values.length}`);
+    throw err ?? new Error(`Invalid Index: ${index}/ ${values.length}`);
   }
 
   const element = values[index];
 
   if (element == null) {
-    throw err != null ? err : new Error(`Invalid Index: ${index}/ ${values.length}`);
+    throw err ?? new Error(`Invalid Index: ${index}/ ${values.length}`);
   }
 
   return element;
