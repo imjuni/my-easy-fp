@@ -1,6 +1,6 @@
 import { describe, expectTypeOf, test } from 'vitest';
 
-import type TResolvePromise from './TResolvePromise';
+import type TResolvePromise from './TResolvePromise.ts';
 
 describe('TResolvePromise type utility', () => {
   test('should extract resolved type from Promise', () => {

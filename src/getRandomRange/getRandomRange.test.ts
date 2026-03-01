@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-syntax, no-plusplus */
 import { describe, expect, test } from 'vitest';
 
-import getRandomRange from './getRandomRange';
+import getRandomRange from './getRandomRange.ts';
 
 describe('getRandomRange', () => {
   test('should return number within range', () => {

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import isUndefined from './isUndefined';
+import isUndefined from './isUndefined.ts';
 
 describe('isUndefined', () => {
   test('should return true for undefined', () => {

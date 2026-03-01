@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import findOrThrow from './findOrThrow';
+import findOrThrow from './findOrThrow.ts';
 
 describe('findOrThrow', () => {
   test('should find element that matches predicate', () => {

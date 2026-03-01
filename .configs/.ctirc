@@ -77,7 +77,7 @@
       //
       // @mode create, bundle
       // @default none
-      "fileExt": "none",
+      "fileExt": "keep",
 
       // overwrite each index.ts file
       // @mode create, bundle

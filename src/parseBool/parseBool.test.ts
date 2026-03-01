@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import parseBool from './parseBool';
+import parseBool from './parseBool.ts';
 
 describe('parseBool', () => {
   test('should return true for string "true"', () => {

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import isError from './isError';
+import isError from './isError.ts';
 
 describe('isError', () => {
   test('should return Error instance when input is Error', () => {

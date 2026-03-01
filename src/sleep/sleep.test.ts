@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import sleep from './sleep';
+import sleep from './sleep.ts';
 
 describe('sleep', () => {
   test('should resolve after default 1000ms', async () => {

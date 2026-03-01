@@ -1,3 +1,10 @@
 {
-  "extends": "./tsconfig.json"
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "dist/**",
+    "**/.configs/**",
+    "**/*.test.ts",
+    "vitest.config.mts",
+    "test-project/**"
+  ]
 }

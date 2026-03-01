@@ -1,6 +1,6 @@
 import { describe, expectTypeOf, test } from 'vitest';
 
-import type TResolveArray from './TResolveArray';
+import type TResolveArray from './TResolveArray.ts';
 
 describe('TResolveArray type utility', () => {
   test('should extract element type from array types', () => {

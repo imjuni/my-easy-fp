@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import isEmpty from './isEmpty';
+import isEmpty from './isEmpty.ts';
 
 describe('isEmpty', () => {
   test('should return true for null', () => {

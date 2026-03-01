@@ -73,3 +73,9 @@ artifact/
 
 # claude configuration
 .claude
+
+# test project generated files
+test-project/*.d.ts
+test-project/*.d.ts.map
+test-project/node_modules/
+test-project/package-lock.json

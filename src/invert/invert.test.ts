@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import invert from './invert';
+import invert from './invert.ts';
 
 describe('invert', () => {
   test('should invert true to false', () => {

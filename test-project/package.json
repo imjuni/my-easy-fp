@@ -1,0 +1,16 @@
+{
+  "name": "test-my-easy-fp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test-npm": "node test-npm.mjs",
+    "test-jsr": "deno run --allow-net test-jsr.ts"
+  },
+  "dependencies": {
+    "my-easy-fp": "file:my-easy-fp-0.22.0.tgz"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

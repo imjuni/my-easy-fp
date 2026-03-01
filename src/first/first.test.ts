@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import first from './first';
+import first from './first.ts';
 
 describe('first', () => {
   test('should return first element of array', () => {

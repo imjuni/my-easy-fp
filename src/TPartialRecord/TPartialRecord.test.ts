@@ -1,6 +1,6 @@
 import { describe, expectTypeOf, test } from 'vitest';
 
-import type PartialRecord from './TPartialRecord';
+import type PartialRecord from './TPartialRecord.ts';
 
 describe('PartialRecord type utility', () => {
   test('should create record with optional keys', () => {

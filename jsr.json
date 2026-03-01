@@ -1,0 +1,10 @@
+{
+  "name": "@imjuni/my-easy-fp",
+  "version": "0.22.0",
+  "exports": "./src/index.ts",
+  "publish": {
+    "include": [
+      "src/"
+    ]
+  }
+}
