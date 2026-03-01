@@ -5,7 +5,7 @@
  * @returns non nullable value
  */
 
-export default function orThrow<T>(value: T | undefined, err?: Error): T {
+export default function orThrow<T, E extends Error>(value: T | undefined, err?: E): NonNullable<T> {
   if (value != null) {
     return value;
   }
