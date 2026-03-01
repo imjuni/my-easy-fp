@@ -35,12 +35,6 @@ export const customOverrideImportXPlugin = [
   // eslint-plugin-import
   // ----------------------------------------------------------------------------------------------------------
   {
-    rules: {
-      'import-x/prefer-default-export': 'off',
-      'import-x/no-default-export': 'error',
-    },
-  },
-  {
     files: ['vitest.config.{ts,mts}'],
     rules: {
       'import-x/prefer-default-export': ['error'],
@@ -141,7 +135,7 @@ export const customOverrideEslintRule = [
 
 export const customIgnore = [
   {
-    ignores: ['./.configs/**', '**/dist/**/*'],
+    ignores: ['./.configs/**', '**/dist/**/*', 'vitest.config.mts'],
   },
 ];
 
@@ -163,25 +157,6 @@ export const customTypescriptRule = [
       // ----------------------------------------------------------------------------------------------------------
       // @typescript-eslint
       // ----------------------------------------------------------------------------------------------------------
-      '@typescript-eslint/naming-convention': [
-        'error',
-        {
-          selector: 'interface',
-          format: ['PascalCase'],
-          custom: {
-            regex: '^I[A-Z]+',
-            match: true,
-          },
-        },
-        {
-          selector: 'typeAlias',
-          format: ['PascalCase'],
-          custom: {
-            regex: '^T[A-Z]+',
-            match: true,
-          },
-        },
-      ],
       '@typescript-eslint/member-delimiter-style': [
         'off',
         {

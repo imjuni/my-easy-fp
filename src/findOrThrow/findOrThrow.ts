@@ -13,7 +13,7 @@ export default function findOrThrow<T, E extends Error>(
   const result = values.find(predicate);
 
   if (result == null) {
-    throw err != null ? err : new Error('findOrThrow got undefined result');
+    throw err ?? new Error('findOrThrow got undefined result');
   }
 
   return result;

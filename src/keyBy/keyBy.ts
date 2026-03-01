@@ -2,7 +2,8 @@ export default function keyBy<T extends Record<K, PropertyKey>, K extends keyof 
   arr: T[],
   keyName: K,
 ): Partial<Record<T[K], T>> {
-  return arr.reduce<Partial<Record<T[K], T>>>((aggregation, item) => {
-    return { ...aggregation, [item[keyName]]: item };
-  }, {});
+  return arr.reduce<Partial<Record<T[K], T>>>(
+    (aggregation, item) => ({ ...aggregation, [item[keyName]]: item }),
+    {},
+  );
 }

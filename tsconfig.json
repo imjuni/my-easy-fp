@@ -40,7 +40,7 @@
   "exclude": [
     "dist/**",
     "**/.configs/**",
-    "jest.config.cjs",
-    ".configs/jest.setup.cjs"
+    "**/*.test.ts",
+    "vitest.config.mts"
   ]
 }

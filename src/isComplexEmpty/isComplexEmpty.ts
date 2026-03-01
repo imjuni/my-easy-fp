@@ -8,7 +8,7 @@
  *
  * @param value value you want to check it's empty
  */
-export default function isComplexEmpty<T>(value?: T | undefined | null): value is null | undefined {
+export default function isComplexEmpty<T>(value?: T | null): value is null | undefined {
   if (value === undefined || value === null) {
     return true;
   }

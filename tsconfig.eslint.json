@@ -5,8 +5,10 @@
   },
   "include": [
     "src/**/*.ts",
-    ".eslintrc.cjs",
-    "jest.config.cjs",
+    "eslint.config.mjs",
+    "eslint.config.custom.mjs",
+    "vitest.config.mjs",
+    "vitest.config.mts",
     "prepublish.js"
   ],
   "exclude": ["**/node_modules/**", "**/dist/**/*", "**/.configs/**", "**/docs/**"]
