@@ -74,6 +74,9 @@ artifact/
 # claude configuration
 .claude
 
+# custom script
+git-short.sh
+
 # test project generated files
 test-project/*.d.ts
 test-project/*.d.ts.map
