@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import toArray from './toArray';
+import toArray from './toArray.ts';
 
 describe('toArray', () => {
   test('should return array as-is when input is already an array', () => {

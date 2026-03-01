@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import atOrUndefined from './atOrUndefined';
+import atOrUndefined from './atOrUndefined.ts';
 
 const arr = [1, 2, 3, 4, 5, 6, 7];
 

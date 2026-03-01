@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import settify from './settify';
+import settify from './settify.ts';
 
 describe('settify', () => {
   test('should remove duplicate numbers', () => {

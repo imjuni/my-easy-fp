@@ -2,6 +2,7 @@
   "extends": "./tsconfig.prod.json",
   "compilerOptions": {
     "moduleResolution": "nodenext", /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    "allowImportingTsExtensions": true, /* Allow importing TypeScript files with .ts extensions */
     "declaration": true,
     "declarationMap": true,
     "declarationDir": "dist/types/origin",

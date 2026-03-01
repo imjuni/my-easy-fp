@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import typedkey from './typedkey';
+import typedkey from './typedkey.ts';
 
 describe('typedkey', () => {
   test('should return keys of simple object', () => {

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import orThrow from './orThrow';
+import orThrow from './orThrow.ts';
 
 describe('orThrow', () => {
   test('should return value when it is not null or undefined', () => {

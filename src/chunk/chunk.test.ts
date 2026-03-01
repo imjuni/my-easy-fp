@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import chunk from './chunk';
+import chunk from './chunk.ts';
 
 describe('chunk', () => {
   test('should chunk array into smaller arrays', () => {

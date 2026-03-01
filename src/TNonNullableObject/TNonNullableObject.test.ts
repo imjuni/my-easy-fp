@@ -1,6 +1,6 @@
 import { describe, expectTypeOf, test } from 'vitest';
 
-import type TNonNullableObject from './TNonNullableObject';
+import type TNonNullableObject from './TNonNullableObject.ts';
 
 describe('TNonNullableObject type utility', () => {
   test('should make all properties required', () => {

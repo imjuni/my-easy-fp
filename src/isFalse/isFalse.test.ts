@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import isFalse from './isFalse';
+import isFalse from './isFalse.ts';
 
 describe('isFalse', () => {
   test('should return true for false', () => {

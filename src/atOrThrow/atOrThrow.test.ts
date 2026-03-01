@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import atOrThrow from './atOrThrow';
+import atOrThrow from './atOrThrow.ts';
 
 const arr = [1, 2, 3, 4, 5, 6, 7];
 

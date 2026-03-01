@@ -135,7 +135,13 @@ export const customOverrideEslintRule = [
 
 export const customIgnore = [
   {
-    ignores: ['./.configs/**', '**/dist/**/*', 'vitest.config.mts'],
+    ignores: [
+      './.configs/**',
+      '**/dist/**/*',
+      'vitest.config.mts',
+      'test-project/**',
+      'src/index.ts',
+    ],
   },
 ];
 
@@ -181,6 +187,17 @@ export const customTypescriptRule = [
         'error',
         {
           prefer: 'type-imports',
+        },
+      ],
+      // ----------------------------------------------------------------------------------------------------------
+      // import-x (for TypeScript file extensions)
+      // ----------------------------------------------------------------------------------------------------------
+      'import-x/extensions': [
+        'error',
+        'always',
+        {
+          ts: 'always',
+          tsx: 'always',
         },
       ],
     },

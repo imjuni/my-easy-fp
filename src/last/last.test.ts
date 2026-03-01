@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import last from './last';
+import last from './last.ts';
 
 describe('last', () => {
   test('should return last element of array', () => {

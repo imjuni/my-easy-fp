@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import isNotComplexEmpty from './isNotComplexEmpty';
+import isNotComplexEmpty from './isNotComplexEmpty.ts';
 
 describe('isNotComplexEmpty', () => {
   test('should return false for null and undefined', () => {

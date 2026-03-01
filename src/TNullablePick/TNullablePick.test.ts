@@ -1,6 +1,6 @@
 import { describe, expectTypeOf, test } from 'vitest';
 
-import type TNullablePick from './TNullablePick';
+import type TNullablePick from './TNullablePick.ts';
 
 describe('TNullablePick type utility', () => {
   test('should make specified keys optional', () => {

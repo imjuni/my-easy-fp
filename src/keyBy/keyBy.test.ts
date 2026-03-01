@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import keyBy from './keyBy';
+import keyBy from './keyBy.ts';
 
 describe('keyBy', () => {
   test('should group array items by key', () => {

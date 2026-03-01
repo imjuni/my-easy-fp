@@ -9,7 +9,7 @@ import type {
   SetRequired,
   Simplify,
   SimplifyOptions,
-} from './typeModules';
+} from './typeModules.ts';
 
 describe('typeModules utilities', () => {
   describe('IsEqual', () => {

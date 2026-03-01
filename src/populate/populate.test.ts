@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import populate from './populate';
+import populate from './populate.ts';
 
 describe('populate', () => {
   test('should create array with zero-based indexing by default', () => {

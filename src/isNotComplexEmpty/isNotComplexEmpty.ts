@@ -1,4 +1,4 @@
-import isComplexEmpty from '../isComplexEmpty/isComplexEmpty';
+import isComplexEmpty from '../isComplexEmpty/isComplexEmpty.ts';
 
 /**
  * Return `true` if the given value is non-empty value. Do additional checks based on the type of value given.
